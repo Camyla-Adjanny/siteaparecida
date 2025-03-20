@@ -1,4 +1,4 @@
-/* Estilização global */
+/* Estilo Global */
 * {
     margin: 0;
     padding: 0;
@@ -6,142 +6,128 @@
 }
 
 body {
-    background-color: #f4f4f4;
     font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
-/* Container principal */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header com imagem */
-header {
+/* Header */
+.header {
     background: url('https://media.licdn.com/dms/image/v2/D4D12AQHb-RV8x24QOQ/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1711492066607?e=1747872000&v=beta&t=LLn-hG0YC9U0N09eEveSWGIHIxtWPxGNzAJFLBhvRzo') no-repeat center center/cover;
-    height: 300px;
+    height: 250px;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-
-header h1 {
-    font-size: 2.8rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 10px;
     text-shadow: 2px 2px 4px #000;
 }
 
-/* Postagens */
-#postagens {
-    margin: 20px 0;
+.header h1 {
+    font-size: 2.5rem;
 }
 
+.header h2 {
+    font-size: 1.5rem;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Postagens */
 .postagem {
     background: white;
-    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex: 1 1 calc(60% - 10px);
 }
 
 .postagem h2, .postagem h3 {
     color: #6200ea;
 }
 
-.postagem p, .postagem li {
+.postagem p, .postagem ul {
     margin-bottom: 10px;
 }
 
-.postagem a.link {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #6200ea;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.postagem a.link:hover {
-    background-color: #4500a1;
-}
-
-/* Aside */
-aside {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Formulário de Contato */
-.contato h2 {
-    text-align: center;
-    color: #6200ea;
-    margin-bottom: 20px;
-}
-
-.contato form {
+/* Sidebar */
+.sidebar {
+    flex: 1 1 calc(30% - 10px);
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Contato */
+.contato {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    color: #6200ea;
+    margin-bottom: 20px;
 }
 
 .contato label {
-    display: block;
     font-weight: bold;
+    display: block;
     margin-bottom: 5px;
 }
 
 .contato input, .contato textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.contato button {
-    width: 100%;
-    padding: 12px;
+.btn {
     background-color: #6200ea;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.contato button:hover {
+.btn:hover {
     background-color: #4500a1;
 }
 
 /* Footer */
-footer {
+.footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    border-radius: 5px 5px 0 0;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
-/* Botão flutuante */
-a[href="#"] {
+/* Scroll to Top */
+.scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -151,13 +137,14 @@ a[href="#"] {
     color: white;
     text-align: center;
     line-height: 50px;
-    font-size: 24px;
     border-radius: 50%;
     text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    font-size: 24px;
+    transition: background-color 0.3s;
 }
 
-a[href="#"]:hover {
+.scroll-to-top:hover {
     background-color: #4500a1;
 }
+
